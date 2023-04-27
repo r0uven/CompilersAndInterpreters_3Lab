@@ -1,0 +1,16 @@
+.CanvasExpression{
+    display: flex;
+}
+.ExpBut{
+    max-width: 269px;
+    min-width: 269px;
+    width: 19%;
+}
+
+html, body { width:99%; height:99%; } /* just to be sure these are full screen*/
+
+canvas {
+    display:block; /* to remove the scrollbars */
+    flex-grow: 1;
+    width: 81%;   
+}

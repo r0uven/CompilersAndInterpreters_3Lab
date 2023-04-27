@@ -6,8 +6,17 @@
         <link rel="stylesheet" href="Main.css">
     </head>
     <body>
-        <input id="Expression" value="5 + ( 7 − 2 ⋅ 3 ) ⋅ ( 6 − 4 ) : 2" type="text">
-        <span><button id="Process" type="submit">обработать</button></span>
+        <div class="CanvasExpression">
+            <div class="ExpBut">
+                <input id="Expression" value="(a+b)*c" type="text">
+                <span><button id="Process" type="submit">обработать</button></span>
+            </div>
+            <canvas class="Tree" id="Tree"></canvas>
+        </div>
     </body>
     <script src="Main.js"></script>
 </html>
+<!-- 5 + ( 7 − 2 ⋅ 3 ) ⋅ ( 6 − 4 ) : 2   Yes -->
+<!-- 5/(7-2*3)*(6-4)+2   No Проблема переприсваивания правого идентификатора -->
+<!-- 4+2*3+2*((4+1)+3/(2-4))   No Проблема переприсваивания правого идентификатора -->
+<!-- 4+2*3+2*4+1+3/2-4   No Проблема переприсваивания правого идентификатора -->
